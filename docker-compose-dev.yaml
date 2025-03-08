@@ -1,0 +1,16 @@
+services:
+  user_authentication:
+    develop:
+      watch:
+        - action: sync+restart
+          path: ./services/user_authentication/user_authentication
+          target: /app
+  fridge:
+    build:
+      target: dev
+    command: yarn dev
+    develop:
+      watch:
+        - action: sync
+          path: ./services/fridge/src
+          target: /app/src

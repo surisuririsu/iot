@@ -1,0 +1,6 @@
+[submodule "services/fridge"]
+	path = services/fridge
+	url = git@github.com:surisuririsu/fridge.git
+[submodule "services/user_authentication"]
+	path = services/user_authentication
+	url = git@github.com:surisuririsu/user_authentication.git

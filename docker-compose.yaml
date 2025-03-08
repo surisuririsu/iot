@@ -1,0 +1,28 @@
+services:
+  user_authentication:
+    container_name: user_authentication
+    build:
+      context: ./services/user_authentication
+    env_file:
+      - ./services/user_authentication/.env
+    ports:
+      - "8000:8000"
+    volumes:
+      - "./.iot/db:/app/db"
+
+  fridge:
+    container_name: fridge
+    build:
+      context: ./services/fridge
+    env_file:
+      - ./services/fridge/.env
+    command: yarn start
+    ports:
+      - "3000:3000"
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
