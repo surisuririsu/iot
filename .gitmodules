@@ -4,3 +4,6 @@
 [submodule "services/user_authentication"]
 	path = services/user_authentication
 	url = git@github.com:surisuririsu/user_authentication.git
+[submodule "services/routing"]
+	path = services/routing
+	url = git@github.com:surisuririsu/routing.git

@@ -8,6 +8,8 @@ services:
   fridge:
     build:
       target: dev
+    environment:
+      - PORT=8000
     command: yarn dev
     develop:
       watch:
